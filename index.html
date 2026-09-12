@@ -1,1 +1,1792 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lee House Painting & Epoxy Flooring</title>
+
+<meta name="description" content="Lee House Painting & Epoxy Flooring provides professional painting and epoxy flooring services for homes, offices, garages and commercial properties.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f8fa;
+    color:#1b1f24;
+    line-height:1.6;
+}
+
+:root{
+    --blue:#0A66C2;
+    --dark:#101820;
+    --dark2:#18232e;
+    --light:#f7f8fa;
+    --white:#fff;
+    --grey:#69727d;
+    --border:#e3e7eb;
+    --gold:#d5a94f;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(16,24,32,.98);
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:17px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#55aaff;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:23px;
+}
+
+.nav-links a{
+    color:white;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#55aaff;
+}
+
+.nav-quote{
+    background:var(--blue);
+    padding:10px 17px;
+    border-radius:5px;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(8,17,27,.70),rgba(8,17,27,.72)),
+    url("https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.badge{
+    display:inline-block;
+    color:#78bbff;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.04;
+    max-width:900px;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#55aaff;
+}
+
+.hero p{
+    max-width:680px;
+    font-size:18px;
+    color:#e7edf3;
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 23px;
+    border-radius:5px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-blue{
+    background:var(--blue);
+    color:white;
+}
+
+.btn-blue:hover{
+    background:#0755a1;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:var(--dark);
+}
+
+/* GENERAL */
+
+section{
+    padding:85px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:48px;
+}
+
+.section-title .small{
+    color:var(--blue);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin:8px 0 12px;
+}
+
+.section-title p{
+    max-width:680px;
+    margin:auto;
+    color:var(--grey);
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.intro-image{
+    min-height:500px;
+    background:
+    url("https://images.unsplash.com/photo-1562663474-6cbb3e99e6b8?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+}
+
+.intro-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.intro-text p{
+    color:var(--grey);
+    margin-bottom:17px;
+}
+
+.highlight{
+    border-left:4px solid var(--blue);
+    padding:14px 18px;
+    background:#f1f6fb;
+    margin-top:25px;
+    font-weight:bold;
+}
+
+/* SERVICES */
+
+.services{
+    background:var(--light);
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    border:1px solid var(--border);
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.icon{
+    font-size:37px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:22px;
+    margin-bottom:9px;
+}
+
+.card p{
+    color:var(--grey);
+    font-size:14px;
+}
+
+/* TWO SERVICE AREAS */
+
+.painting{
+    background:white;
+}
+
+.flooring{
+    background:#111b24;
+    color:white;
+}
+
+.big-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.big-image{
+    min-height:520px;
+    background:
+    url("https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+}
+
+.floor-image{
+    min-height:520px;
+    background:
+    url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+}
+
+.big-text .small{
+    color:#55aaff;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.big-text h2{
+    font-size:45px;
+    margin:10px 0 18px;
+}
+
+.big-text p{
+    color:var(--grey);
+    margin-bottom:20px;
+}
+
+.flooring .big-text p{
+    color:#c9d1d8;
+}
+
+.list{
+    display:grid;
+    gap:12px;
+}
+
+.list-item{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+}
+
+.tick{
+    color:var(--blue);
+    font-weight:bold;
+}
+
+/* FLOOR TYPES */
+
+.floor-types{
+    background:#f0f3f6;
+}
+
+.type-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.type{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border:1px solid var(--border);
+}
+
+.type-icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.type h3{
+    margin-bottom:7px;
+}
+
+.type p{
+    font-size:13px;
+    color:var(--grey);
+}
+
+/* WHY */
+
+.why{
+    background:white;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    text-align:center;
+    padding:25px 18px;
+}
+
+.why-number{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#e8f2fc;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    font-weight:bold;
+}
+
+.why-card h3{
+    margin-bottom:8px;
+}
+
+.why-card p{
+    color:var(--grey);
+    font-size:14px;
+}
+
+/* PROCESS */
+
+.process{
+    background:var(--light);
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    background:white;
+    padding:28px;
+    border:1px solid var(--border);
+}
+
+.process-number{
+    color:var(--blue);
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.process-card h3{
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:var(--grey);
+    font-size:14px;
+}
+
+/* GALLERY */
+
+.gallery{
+    background:white;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery-item{
+    height:330px;
+    overflow:hidden;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+/* CTA */
+
+.cta{
+    background:
+    linear-gradient(rgba(10,102,194,.88),rgba(10,102,194,.88)),
+    url("https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:0 auto 28px;
+    color:#eaf4ff;
+}
+
+/* BOOKING */
+
+.booking{
+    background:white;
+}
+
+.booking-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+}
+
+.booking-info h2{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.booking-info p{
+    color:var(--grey);
+    margin-bottom:22px;
+}
+
+.contact-box{
+    border-bottom:1px solid var(--border);
+    padding:14px 0;
+}
+
+.contact-box strong{
+    display:block;
+}
+
+.contact-box span{
+    color:var(--grey);
+}
+
+.form-box{
+    background:#f5f7f9;
+    padding:30px;
+}
+
+.form-box h3{
+    font-size:27px;
+    margin-bottom:20px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d9dee3;
+    background:white;
+    font-family:inherit;
+    margin-bottom:14px;
+    outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:var(--blue);
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.form-box button{
+    width:100%;
+}
+
+/* PAYMENT */
+
+.payment{
+    background:#111b24;
+    color:white;
+    text-align:center;
+}
+
+.payment h2{
+    font-size:40px;
+    margin:8px 0 12px;
+}
+
+.payment p{
+    max-width:650px;
+    margin:0 auto 25px;
+    color:#cbd4dc;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b1117;
+    color:white;
+    padding:50px 20px 25px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer h3 span{
+    color:#55aaff;
+}
+
+footer p,
+footer a{
+    color:#9ca8b3;
+    font-size:14px;
+}
+
+.footer-links{
+    display:grid;
+    gap:8px;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:40px auto 0;
+    border-top:1px solid #27313a;
+    padding-top:20px;
+    text-align:center;
+    color:#68737e;
+    font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:59px;
+    height:59px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    z-index:999;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .menu{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:67px;
+        left:0;
+        right:0;
+        background:#101820;
+        flex-direction:column;
+        padding:25px;
+        gap:18px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .intro-grid,
+    .big-grid,
+    .booking-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .type-grid,
+    .why-grid,
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:65px 18px;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title h2,
+    .intro-text h2,
+    .big-text h2,
+    .booking-info h2,
+    .payment h2,
+    .cta h2{
+        font-size:34px;
+    }
+
+    .service-grid,
+    .type-grid,
+    .why-grid,
+    .process-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .intro-image,
+    .big-image,
+    .floor-image{
+        min-height:350px;
+    }
+
+    .gallery-item{
+        height:280px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+Lee <span>Painting & Flooring</span>
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#painting">Painting</a>
+<a href="#flooring">Epoxy Flooring</a>
+<a href="#gallery">Gallery</a>
+<a href="#booking">Get Quote</a>
+
+<a class="nav-quote" href="#booking">
+Free Quote
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+Painting • Epoxy Flooring • Property Finishing
+</div>
+
+<h1>
+Give Your Property
+<span>A Fresh New Look.</span>
+</h1>
+
+<p>
+Lee House Painting & Epoxy Flooring helps transform homes,
+offices, garages and commercial spaces with professional painting
+and modern flooring solutions.
+</p>
+
+<div class="buttons">
+
+<a href="#booking" class="btn btn-blue">
+Request A Quote
+</a>
+
+<a
+href="https://wa.me/27688585355"
+target="_blank"
+class="btn btn-outline">
+WhatsApp Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="intro">
+
+<div class="container intro-grid">
+
+<div class="intro-image"></div>
+
+<div class="intro-text">
+
+<div class="section-title" style="text-align:left;margin-bottom:20px">
+
+<div class="small">
+Lee Painting & Flooring
+</div>
+
+<h2>
+Fresh Walls. Strong Floors. Better Spaces.
+</h2>
+
+</div>
+
+<p>
+We provide painting and flooring solutions designed to improve the
+appearance and functionality of your property.
+</p>
+
+<p>
+Whether you are refreshing a single room, repainting a complete house,
+updating an office or transforming a garage floor, we can discuss your
+requirements and prepare a quotation based on the project.
+</p>
+
+<div class="highlight">
+Every project starts with understanding the property, the required work
+and the finish you want.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">Our Services</div>
+
+<h2>Painting & Flooring Solutions</h2>
+
+<p>
+Choose the service you need or contact us to discuss a combined
+painting and flooring project.
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="card">
+<div class="icon">🎨</div>
+<h3>Interior Painting</h3>
+<p>
+Walls, ceilings, rooms, hallways and interior surfaces.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏠</div>
+<h3>Exterior Painting</h3>
+<p>
+House exteriors, walls and other outdoor surfaces.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏢</div>
+<h3>Commercial Painting</h3>
+<p>
+Painting solutions for offices, shops and other commercial properties.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧱</div>
+<h3>Wall Preparation</h3>
+<p>
+Surface preparation, filling, sanding and preparation before painting.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚗</div>
+<h3>Garage Floors</h3>
+<p>
+Epoxy flooring solutions for garages and suitable hard-wearing spaces.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">✨</div>
+<h3>Epoxy Flooring</h3>
+<p>
+Modern seamless-style flooring for selected residential and commercial
+applications.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏭</div>
+<h3>Workshop Floors</h3>
+<p>
+Discuss epoxy flooring options for workshops and work areas.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏪</div>
+<h3>Commercial Floors</h3>
+<p>
+Flooring solutions for selected shops, offices and commercial spaces.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔧</div>
+<h3>Floor Preparation</h3>
+<p>
+Existing surface assessment and preparation before the flooring system
+is installed.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAINTING -->
+<section class="painting" id="painting">
+
+<div class="container big-grid">
+
+<div class="big-image"></div>
+
+<div class="big-text">
+
+<div class="small">
+House Painting
+</div>
+
+<h2>
+Transform Your Walls With A Fresh Finish
+</h2>
+
+<p>
+Give your property a completely different feel with a fresh coat of
+paint. We can discuss colour choices, the condition of the surfaces and
+the scope of the work before preparing a quotation.
+</p>
+
+<div class="list">
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Interior walls and ceilings</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Exterior house painting</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Boundary walls</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Feature walls</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Room repainting</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Office and commercial painting</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Surface preparation</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#booking" class="btn btn-blue">
+Get Painting Quote
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EPOXY -->
+<section class="flooring" id="flooring">
+
+<div class="container big-grid">
+
+<div class="big-text">
+
+<div class="small">
+Epoxy Flooring
+</div>
+
+<h2>
+Modern Flooring For Hard-Working Spaces
+</h2>
+
+<p>
+Epoxy flooring can provide a clean, durable-style finish for suitable
+concrete surfaces. The correct system depends on the existing floor,
+condition, use and desired finish.
+</p>
+
+<div class="list">
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Garage floors</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Workshops</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Utility areas</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Selected commercial spaces</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Concrete floor preparation</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Floor coating enquiries</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#booking" class="btn btn-blue">
+Get Flooring Quote
+</a>
+
+</div>
+
+<div class="floor-image"></div>
+
+</div>
+
+</section>
+
+
+<!-- FLOOR TYPES -->
+<section class="floor-types">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">Flooring Options</div>
+
+<h2>Ask About Your Flooring Project</h2>
+
+<p>
+The final flooring system depends on the existing surface and the
+requirements of the space.
+</p>
+
+</div>
+
+<div class="type-grid">
+
+<div class="type">
+<div class="type-icon">🚗</div>
+<h3>Garage</h3>
+<p>
+Clean-looking flooring designed for suitable garage surfaces.
+</p>
+</div>
+
+<div class="type">
+<div class="type-icon">🔧</div>
+<h3>Workshop</h3>
+<p>
+Flooring options for selected work and workshop environments.
+</p>
+</div>
+
+<div class="type">
+<div class="type-icon">🏠</div>
+<h3>Home</h3>
+<p>
+Discuss suitable flooring applications for residential areas.
+</p>
+</div>
+
+<div class="type">
+<div class="type-icon">🏢</div>
+<h3>Commercial</h3>
+<p>
+Flooring enquiries for offices, shops and other commercial spaces.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY -->
+<section class="why">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">Why Choose Us</div>
+
+<h2>A Straightforward Project Experience</h2>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-number">01</div>
+
+<h3>Quote First</h3>
+
+<p>
+We discuss the job and scope before you decide.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<div class="why-number">02</div>
+
+<h3>Project Focus</h3>
+
+<p>
+We focus on the specific work your property requires.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<div class="why-number">03</div>
+
+<h3>Clear Communication</h3>
+
+<p>
+Stay in contact with us throughout your project.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<div class="why-number">04</div>
+
+<h3>Convenient Booking</h3>
+
+<p>
+Send your project details directly through WhatsApp.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+<section class="process">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">Our Process</div>
+
+<h2>From Enquiry To Project</h2>
+
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+
+<div class="process-number">01</div>
+
+<h3>Tell Us What You Need</h3>
+
+<p>
+Send us details about your painting or flooring project.
+</p>
+
+</div>
+
+<div class="process-card">
+
+<div class="process-number">02</div>
+
+<h3>Assess The Work</h3>
+
+<p>
+We discuss the surfaces, size, condition and required finish.
+</p>
+
+</div>
+
+<div class="process-card">
+
+<div class="process-number">03</div>
+
+<h3>Receive Your Quote</h3>
+
+<p>
+A quotation can be prepared based on the agreed project scope.
+</p>
+
+</div>
+
+<div class="process-card">
+
+<div class="process-number">04</div>
+
+<h3>Start The Project</h3>
+
+<p>
+Once the quotation and arrangements are accepted, the project can
+proceed.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">Project Gallery</div>
+
+<h2>Painting & Flooring Inspiration</h2>
+
+<p>
+Replace these sample images with photos of your own completed projects
+as you build your portfolio.
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1562663474-6cbb3e99e6b8?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+<div class="container">
+
+<h2>Ready To Refresh Your Property?</h2>
+
+<p>
+Whether you need your house painted, a garage floor transformed or a
+larger property finishing project, send us your requirements.
+</p>
+
+<a href="#booking" class="btn btn-blue">
+Request Your Quote
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+
+<div class="container booking-grid">
+
+<div class="booking-info">
+
+<div class="section-title" style="text-align:left;margin-bottom:20px">
+
+<div class="small">
+Get In Touch
+</div>
+
+<h2>
+Request A Painting Or Flooring Quote
+</h2>
+
+</div>
+
+<p>
+Complete the form and we'll prepare your enquiry for WhatsApp.
+</p>
+
+<div class="contact-box">
+<strong>WhatsApp</strong>
+<span>068 858 5355</span>
+</div>
+
+<div class="contact-box">
+<strong>Services</strong>
+<span>Painting • Epoxy Flooring</span>
+</div>
+
+<div class="contact-box">
+<strong>Projects</strong>
+<span>Residential • Commercial • Property Improvements</span>
+</div>
+
+</div>
+
+
+<div class="form-box">
+
+<h3>Project Enquiry</h3>
+
+<form onsubmit="sendWhatsApp(event)">
+
+<div class="form-row">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required
+>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required
+>
+
+</div>
+
+
+<select id="service" required>
+
+<option value="">
+Select Service
+</option>
+
+<option>Interior House Painting</option>
+<option>Exterior House Painting</option>
+<option>Ceiling Painting</option>
+<option>Boundary Wall Painting</option>
+<option>Feature Wall</option>
+<option>Commercial Painting</option>
+<option>Epoxy Garage Flooring</option>
+<option>Epoxy Workshop Flooring</option>
+<option>Epoxy Commercial Flooring</option>
+<option>Floor Preparation</option>
+<option>Painting & Epoxy Flooring</option>
+<option>Other</option>
+
+</select>
+
+
+<select id="property" required>
+
+<option value="">
+Property Type
+</option>
+
+<option>House</option>
+<option>Apartment</option>
+<option>Garage</option>
+<option>Office</option>
+<option>Shop</option>
+<option>Workshop</option>
+<option>Commercial Property</option>
+<option>Other</option>
+
+</select>
+
+
+<input
+type="text"
+id="area"
+placeholder="Property Area / Location"
+required
+>
+
+
+<input
+type="text"
+id="size"
+placeholder="Approximate Area / Size (Optional)"
+>
+
+
+<input
+type="date"
+id="date"
+>
+
+
+<textarea
+id="details"
+placeholder="Tell us about the job. For example: number of rooms, walls, current floor condition, colours, epoxy requirements, etc."
+required
+></textarea>
+
+
+<button
+type="submit"
+class="btn btn-blue">
+💬 Send Quote Request
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAYMENT -->
+<section class="payment">
+
+<div class="container">
+
+<div class="badge">
+Secure Payment
+</div>
+
+<h2>Pay With Yoco</h2>
+
+<p>
+Once your quotation, deposit or project payment has been agreed,
+you can use our Yoco payment option.
+</p>
+
+<a
+href="https://pay.yoco.com/lee-mobile-servises-and-constraction"
+target="_blank"
+class="btn btn-blue">
+Pay With Yoco
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Contact Lee Painting & Flooring
+</div>
+
+<h2>Let's Discuss Your Project</h2>
+
+<p>
+Send us a WhatsApp message and tell us what you would like painted or
+what type of flooring you need.
+</p>
+
+</div>
+
+<div style="text-align:center">
+
+<a
+href="https://wa.me/27688585355"
+target="_blank"
+class="btn btn-blue">
+WhatsApp 068 858 5355
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+Lee <span>Painting & Flooring</span>
+</h3>
+
+<p>
+House painting, commercial painting and epoxy flooring solutions
+for suitable residential and commercial projects.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Services</h3>
+
+<div class="footer-links">
+<a href="#painting">House Painting</a>
+<a href="#painting">Exterior Painting</a>
+<a href="#flooring">Epoxy Flooring</a>
+<a href="#flooring">Garage Flooring</a>
+<a href="#booking">Get Quote</a>
+</div>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<div class="footer-links">
+
+<a
+href="https://wa.me/27688585355"
+target="_blank">
+WhatsApp: 068 858 5355
+</a>
+
+<a
+href="https://pay.yoco.com/lee-mobile-servises-and-constraction"
+target="_blank">
+Pay With Yoco
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Lee House Painting & Epoxy Flooring.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP FLOAT -->
+<a
+class="whatsapp"
+href="https://wa.me/27688585355"
+target="_blank"
+aria-label="WhatsApp">
+☎
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList.toggle("active");
+
+}
+
+
+function sendWhatsApp(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const service =
+document.getElementById("service").value;
+
+const property =
+document.getElementById("property").value;
+
+const area =
+document.getElementById("area").value;
+
+const size =
+document.getElementById("size").value;
+
+const date =
+document.getElementById("date").value;
+
+const details =
+document.getElementById("details").value;
+
+
+const message =
+
+`Hello Lee Painting & Epoxy Flooring,
+
+I would like to request a quotation.
+
+Name: ${name}
+Phone: ${phone}
+
+Service: ${service}
+Property Type: ${property}
+Property Area/Location: ${area}
+Approximate Size: ${size || "Not specified"}
+Preferred Date: ${date || "Not specified"}
+
+Project Details:
+${details}
+
+Please let me know how we can proceed with the quotation.
+
+Thank you.`;
+
+
+const url =
+"https://wa.me/27688585355?text=" +
+encodeURIComponent(message);
+
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
